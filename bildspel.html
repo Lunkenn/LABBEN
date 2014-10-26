@@ -1,0 +1,105 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="windows-1252" /> 
+<style>
+
+body {
+    font-family: Arial;
+   background-image: url('background.jpg');
+    line-height: 20px;
+}
+#container{
+
+	text-align: center;
+width: 600px;
+height: 400px;
+margin-top: 200px;
+margin-left: 640px;
+border: 8px solid #444;
+background: #e5e5e5;
+
+}
+
+
+</style>
+<title>DA ANIMALF0shizzle bildspel </title> 
+<script type="text/javascript"> 
+
+function lastPic() 
+{ 
+
+counter=bilder.length-1; 
+
+document.getElementById('bildID').src = bilder[counter]; 
+}
+function firstPic() 
+{ 
+
+counter=0; 
+
+document.getElementById('bildID').src = bilder[counter]; 
+}
+function prevPic() 
+{ 
+
+counter=counter-1; 
+if(counter<0) 
+{ 
+ counter=0; 
+} 
+document.getElementById('bildID').src = bilder[counter]; 
+}
+function nextPic() 
+{ 
+
+counter=counter+1; 
+if(counter>=bilder.length-1) 
+{ 
+ counter=bilder.length-1; 
+} 
+document.getElementById('bildID').src = bilder[counter]; 
+}
+var counter = 0; 
+
+var bilder = new Array(); 
+bilder [0] = 'start.jpg'; 
+bilder [1] = '1_rhino.jpg';
+bilder [2] = '2_lion.jpg'; 
+bilder [3] = '3_giraffe.jpg'; 
+bilder [4] = 'stop.jpg'; 
+
+</script> 
+</head> 
+<body style="text-align:center"> 
+<div id="container">
+<br/>
+<br/>
+
+<!--När sidan visas första gången ligger redan startbilden 
+ute--> 
+
+<img id="bildID" src="start.jpg" width="300" 
+height="200" alt="Startbild" /> 
+<br/>
+<input type="button" value=" << First " onClick="firstPic()" /> 
+<input type="button" value=" <-Prev " onClick="prevPic()" /> 
+<input type="button" value=" Next-> " onClick="nextPic()" /> 
+<input type="button" value=" Last >> " onClick="lastPic()" /> 
+<br/>
+<br/>
+<input type="button" value=" Extrauppgiften " onClick="location.href='extra.html'" /> 
+
+
+
+
+<br/> 
+<br/> 
+
+Bilder från: 
+<a href="http://www.freedigitalphotos.net"> 
+FreeDigitalPhotos.net</a> 
+
+</div> 
+</body> 
+</html> 

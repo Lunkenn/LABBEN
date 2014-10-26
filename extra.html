@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1252" />
+
+<style>
+
+body {
+    font-family: Arial;
+   background-image: url('background.jpg');
+    line-height: 20px;
+}
+#container{
+
+	text-align: center;
+width: 1000px;
+height: 900px;
+margin: 0 auto 0 auto;
+border: 8px solid #444;
+background: #e5e5e5;
+
+}
+
+
+</style>
+
+<title>Keita CS:GO</title>
+
+<script type="text/javascript">
+
+
+function lastPic() 
+{ 
+
+counter=bildspel12.length-1; 
+
+document.getElementById('bildID').src = bildspel12[counter]; 
+ document.getElementById('text').innerHTML = bildtext[counter];
+}
+function firstPic() 
+{ 
+
+counter=0; 
+
+document.getElementById('bildID').src = bildspel12[counter]; 
+ document.getElementById('text').innerHTML = bildtext[counter];
+}
+function prevPic() 
+{ 
+
+counter=counter-1; 
+if(counter<0) 
+{ 
+ counter=0; 
+} 
+document.getElementById('bildID').src = bildspel12[counter]; 
+ document.getElementById('text').innerHTML = bildtext[counter];
+}
+function nextPic() 
+{ 
+
+counter=counter+1; 
+if(counter>=bildspel12.length-1) 
+{ 
+ counter=bildspel12.length-1; 
+} 
+document.getElementById('bildID').src = bildspel12[counter]; 
+document.getElementById('text').innerHTML = bildtext[counter];
+}
+
+var counter = 0; 
+
+var bildspel12 = new Array(); 
+bildspel12 [0] = 'extrastart.jpg'; 
+bildspel12 [1] = 'rasmus.jpg';
+bildspel12 [2] = 'kalle.jpg'; 
+bildspel12 [3] = 'elias.jpg'; 
+bildspel12 [4] = 'get.jpeg'; 
+
+var bildtext = new Array(); 
+bildtext [0] = 'Keita Gaming - CS:GO'; 
+bildtext [1] = 'Rasmus Sandström - VD, Huvudansv. CS:GO sektionen';
+bildtext [2] = 'Kalle Lundgren - Turneringsansv. CS:GO'; 
+bildtext [3] = 'Elias Persson - Sponsansv. CS:GO'; 
+bildtext [4] = 'Våran Chef Geten Bärtill @Johan Sundhage'; 
+
+
+
+
+
+
+</script>
+</head>
+
+<Body style="text-align:center" onload="firstPic()" >
+<div id="container">
+<br/>
+<br/>
+<img id="bildID" width="600" 
+height="700"/> 
+<br/>
+
+<span id="text" style="color:grey"> </span>
+<br/>
+<br/>
+<input type="button" value=" << First " onClick="firstPic()" /> 
+<input type="button" value=" <-Prev " onClick="prevPic()" /> 
+<input type="button" value=" Next-> " onClick="nextPic()" /> 
+<input type="button" value=" Last >> " onClick="lastPic()" /> 
+<br/>
+<br/>
+<input type="button" value=" Oblig. Uppgiften " onClick="location.href='bildspel.html'" /> 
+
+</div>
+</body>
+</html>
